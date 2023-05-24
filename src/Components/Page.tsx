@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Image from './foto.png';
+import Axios from 'axios';
+const baseURL = "https://6077803e1ed0ae0017d6aea4.mockapi.io/test-frontend/products";
 import 
 {
     Container, 
@@ -27,6 +29,8 @@ import
 } 
 from './Styles/styledRight';
 import { IoIosRemove, IoMdAdd } from "react-icons/io";
+import { Popover } from './Popover';
+import axios from 'axios';
 interface MyObject {
     campo1: number;
     campo2: number;
@@ -34,6 +38,10 @@ interface MyObject {
     campo4: number;
     campo5: number;
   }
+/*   interface ObjeProduct{
+    description: string;
+    offer: string
+  } */
 export function Page(){
     const [values, setValues] = useState<MyObject>({
         campo1: 0,
@@ -42,6 +50,20 @@ export function Page(){
         campo4: 0,
         campo5: 0,
     });
+    const [products,setProducts] = useState({
+        description: '',
+        offer: '',
+    });
+    useEffect(() => {
+        axios.get(baseURL).then((response) => {
+          setProducts({
+            ...products,
+            description: response.data[0].description,
+            offer: response.data[0].nm_product,
+          });
+        });
+      }, []);
+    const [type,setType] = useState(false);
     const handleIncrement = (fieldName: keyof MyObject) => {
         setValues({
             ...values,
@@ -59,36 +81,23 @@ export function Page(){
         });
       };
     return(
-
         <Main >
-            {/*Left */}
             <Container >
                 <Boximage>
                     <img src={Image} alt="Hamburguer" style={{width:'560px',height:'340px' }}/>
                 </Boximage>
-                {/* <Section>
-                    <Span>Oferta Picanha Cheddar Bacon</Span>
-                </Section> */}
                 <Section>
-                    Oferta Picanha Cheddar Bacon
+                    {products.offer}
                 </Section> 
-                
-                {/* <SectionT>
-                    <span>Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, 
-                        queijo cheddar, molho cheddar e pão mix de gergelim
-                    </span>
-                </SectionT> */}
+            
                  <SectionT>
-                    Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, 
-                        queijo cheddar, molho cheddar e pão mix de gergelim
-                    
+                    {products.description}
                 </SectionT> 
                 <Price>
                     <span>R$ 31,99</span>
                     <span>R$ 34,95</span>
                 </Price>
             </Container>
-            {/*Right */}
             <ContainerRight>
                 <ContainerMain>
                     <AddItems>
@@ -110,7 +119,6 @@ export function Page(){
                             onClick={()=>handleIncrement('campo1')}>
                                 <IoMdAdd size="24px"/>
                             </button>
-
                         </Quanti>
                         <Line />
                     </Items>
@@ -182,7 +190,11 @@ export function Page(){
                             <IoMdAdd size="24px"/>
                         </button>
                     </MoreLess>
-                    <button>Adicionar</button>
+                    <button
+                        onClick={()=>setType(!type)}>
+                        Adicionar
+                    </button>
+                    {type ? <Popover/> : null}
                 </Finish>
                 
             </ContainerRight>

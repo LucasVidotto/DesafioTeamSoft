@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page } from './Components/Page';
 import { NavBar } from './Components/Nav';
+import { Popover } from './Components/Popover';
 
 function App() {
   return (

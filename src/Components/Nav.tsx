@@ -9,6 +9,9 @@ import
     Login,
     Cart, 
     ShopCart,
+    ValueCart,
+    Elipse,
+    SpanCart,
 } 
 from './Styles/styledNav';
 import Logo from '../assets/logo.svg'
@@ -48,6 +51,9 @@ export function NavBar(){
                     <button>
                         <BsCart3 size="24.68px"color="#ED3237"/>
                     </button>
+                    <ValueCart>0</ValueCart>
+                    <Elipse />
+                    <SpanCart >Carrinho</SpanCart>
                 </ShopCart>
            </Cart>
         </Nav>

@@ -123,3 +123,41 @@ export const ShopCart = styled.div`
         cursor:pointer;
     }
 `
+export const ValueCart = styled.div`
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 88.9%;
+    top: 2.4%;
+    order: 2;
+    z-index: 2;
+    color:#FFF;
+`
+
+export const Elipse = styled.div`
+    position: absolute;
+    width: 16px;
+    border-radius: 50%;
+    height: 16px;
+    left: 88.6%;
+    top: 2.4%;
+    background: #F09035;
+    order: 1;
+    z-index: 1;
+`
+export const SpanCart = styled.span`
+    display:flex;
+    width: 66px;
+    height: 16px;
+    left: 784px;
+    top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: #ED3237;
+`
