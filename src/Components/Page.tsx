@@ -21,16 +21,42 @@ import
     Line,
     BoxSpan,
     Quanti,
+    ContainerTalher,
+    Finish,
+    MoreLess,
 } 
 from './Styles/styledRight';
 import { IoIosRemove, IoMdAdd } from "react-icons/io";
+interface MyObject {
+    campo1: number;
+    campo2: number;
+    campo3: number;
+    campo4: number;
+    campo5: number;
+  }
 export function Page(){
-    const [values, setValues] = useState<number>(0);
-    const handleIncrement = () => {
-        setValues(values + 1);
+    const [values, setValues] = useState<MyObject>({
+        campo1: 0,
+        campo2: 0,
+        campo3: 0,
+        campo4: 0,
+        campo5: 0,
+    });
+    const handleIncrement = (fieldName: keyof MyObject) => {
+        setValues({
+            ...values,
+            [fieldName]: values[fieldName] + 1,
+          });
       };
-    const handleDecrement = () => {
-        setValues(values - 1);
+      const handleDecrement = (fieldName: keyof MyObject) => {
+        setValues((prevValues) => {
+          const currentValue = prevValues[fieldName];
+          const newValue = currentValue > 0 ? currentValue - 1 : 0;
+          return {
+            ...prevValues,
+            [fieldName]: newValue,
+          };
+        });
       };
     return(
 
@@ -74,10 +100,16 @@ export function Page(){
                             <span>Queijo Chedar</span>
                             <span>+ R$4,99</span>
                         </BoxSpan>
-                        <Quanti valor={values}>
-                            <button><IoIosRemove size="24px"/></button>
-                            <span>0</span>
-                            <button><IoMdAdd size="24px"/></button>
+                        <Quanti valor={values.campo1}>
+                            <button
+                                onClick={()=>handleDecrement('campo1')}>
+                                <IoIosRemove size="24px"/>
+                            </button>
+                            <span>{values.campo1}</span>
+                            <button
+                            onClick={()=>handleIncrement('campo1')}>
+                                <IoMdAdd size="24px"/>
+                            </button>
 
                         </Quanti>
                         <Line />
@@ -87,13 +119,13 @@ export function Page(){
                             <span>Cebola crispy</span>
                             <span>+ R$1,50</span>
                         </BoxSpan>
-                        <Quanti valor={values}>
+                        <Quanti valor={values.campo2}>
                             <button
-                            onClick={()=>handleDecrement()}>
+                            onClick={()=>handleDecrement('campo2')}>
                             <IoIosRemove size="24px"/></button>
-                            <span>{values}</span>
+                            <span>{values.campo2}</span>
                             <button
-                            onClick={()=>handleIncrement()}>
+                            onClick={()=>handleIncrement('campo2')}>
                             <IoMdAdd size="24px"/></button>
                         </Quanti>
                         <Line />
@@ -103,10 +135,16 @@ export function Page(){
                             <span>Molho de picanha</span>
                             <span>+ R$3,50</span>
                         </BoxSpan>
-                        <Quanti valor={values}>
-                            <button><IoIosRemove size="24px"/></button>
-                            <span>0</span>
-                            <button><IoMdAdd size="24px"/></button>
+                        <Quanti valor={values.campo3}>
+                        <button
+                                onClick={()=>handleDecrement('campo3')}>
+                                <IoIosRemove size="24px"/>
+                            </button>
+                            <span>{values.campo3}</span>
+                            <button
+                            onClick={()=>handleIncrement('campo3')}>
+                                <IoMdAdd size="24px"/>
+                            </button>
                         </Quanti>
                         <Line />
                     </Items>
@@ -115,14 +153,37 @@ export function Page(){
                             <span>Molho cheddar</span>
                             <span>+ R$3,50</span>
                         </BoxSpan>
-                        <Quanti valor={values}>
-                            <button><IoIosRemove size="24px"/></button>
-                            <span>0</span>
-                            <button><IoMdAdd size="24px"/></button>
+                        <Quanti valor={values.campo4}>
+                        <button
+                                onClick={()=>handleDecrement('campo4')}>
+                                <IoIosRemove size="24px"/>
+                            </button>
+                            <span>{values.campo4}</span>
+                            <button
+                            onClick={()=>handleIncrement('campo4')}>
+                                <IoMdAdd size="24px"/>
+                            </button>
                         </Quanti>
                         <Line />
                     </Items>
+                    <ContainerTalher>
+                        <span>Precisa de Talher?</span>
+                    </ContainerTalher>
                 </ContainerMain>
+                <Finish>
+                    <MoreLess valor={values.campo5}>
+                        <button
+                            onClick={()=>handleDecrement('campo5')}>
+                            <IoIosRemove size="24px"/>
+                        </button>
+                        <span>{values.campo5}</span>
+                        <button
+                            onClick={()=>handleIncrement('campo5')}>
+                            <IoMdAdd size="24px"/>
+                        </button>
+                    </MoreLess>
+                    <button>Adicionar</button>
+                </Finish>
                 
             </ContainerRight>
         </Main>

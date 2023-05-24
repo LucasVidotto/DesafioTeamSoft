@@ -5,8 +5,7 @@ export const Nav = styled.div`
     flex-direction:row;
     align-items: center;
     background-color: #F4F4F4;
-    height: 80px;
-    
+    height: 80px; 
     margin:0;
     padding: 0%;
 `
@@ -100,5 +99,27 @@ export const Login = styled.div`
         color: #ED3237;
         font-size: 16px;
         margin-left: 10.60px;
+    }
+`
+export const Cart = styled.div`
+    width: 106px;
+    height: 40px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+`
+
+export const ShopCart = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.25rem;
+    margin-left:24px;
+    width: 32px;
+    height: 32px;
+    &>button{
+        border:none;
+        background: transparent;
+        cursor:pointer;
     }
 `

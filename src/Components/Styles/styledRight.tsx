@@ -19,9 +19,11 @@ export const ContainerRight =  styled.div`
     flex-direction: column;
     align-items: center;
     padding: 32px;
+    margin-top:2rem;
+    margin-bottom:2rem;
     gap: 21px;
     width: 439px;
-    height: 592px;
+    height: 730px;
     border: 1px solid #686868;
     border-radius: 8px;
     flex: none;
@@ -149,4 +151,94 @@ export const Quanti = styled.div<QuantiProps>`
         bottom: 45.83%;
         width: 24px;
     } */
+`
+export const ContainerTalher = styled.div`
+    display:flex;
+    align-items: center;
+    position: relative;
+    width: 375px;
+    height: 55px;
+    left: 0px;
+    top: 21px;
+    background: rgba(253, 215, 14, 0.2);
+    order:2;
+    margin: 0 32px;
+    span:first-child{
+        margin-left: 1rem;
+    }
+`
+export const SideT = styled.div`
+    position: absolute;
+    width: 343px;
+    height: 23px;
+    left: 16px;
+    top: 499px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #4E4E4E;
+`
+
+export const Finish  = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 16px;
+    width: 375px;
+    height: 30px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    button:nth-child(2){
+        position: relative;
+        width: 219px;
+        height: 40px;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+        background: #F09035;
+        border-radius: 4px;
+        border:none;
+        cursor:pointer;
+        &:hover {
+            background-color: #f48628;
+        }
+    }
+    
+`
+export const MoreLess = styled.div<QuantiProps>`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    height:40px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #FFFFFF;
+    border: 1px solid #F09035;
+    border-radius: 4px;
+    & > button{
+        /* width: 14px;
+        height: 18px; */
+        color: #D80000;
+        background: transparent;
+        border:none;
+        cursor:pointer;
+        margin:auto;
+    }
+    button:first-child{
+        color: ${(props) => (props.valor <= 0 ? '#AEB6C1' : '#D80000')};
+    }
 `

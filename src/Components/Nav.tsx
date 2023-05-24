@@ -1,10 +1,22 @@
 import React from 'react';
-import { Nav, Figure, Box,Spans,Search,Login } from './Styles/styledNav';
+import 
+{ 
+    Nav, 
+    Figure, 
+    Box,
+    Spans,
+    Search,
+    Login,
+    Cart, 
+    ShopCart,
+} 
+from './Styles/styledNav';
 import Logo from '../assets/logo.svg'
 import Delivere from '../assets/deliveri.svg'
 import Close from '../assets/close.svg'
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
+import { BsCart3 } from "react-icons/bs";
 
 export function NavBar(){
     return(
@@ -31,6 +43,13 @@ export function NavBar(){
                 <BiUserCircle size="26.67px" color="#ED3237" />
                 <span>Entrar</span>
            </Login> 
+           <Cart>
+                <ShopCart>
+                    <button>
+                        <BsCart3 size="24.68px"color="#ED3237"/>
+                    </button>
+                </ShopCart>
+           </Cart>
         </Nav>
     )
 }
