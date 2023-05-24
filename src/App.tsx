@@ -1,32 +1,17 @@
-import React from 'react';
-import { Page } from './Components/Page';
-import { NavBar } from './Components/Nav';
-import { Popover } from './Components/Popover';
-
+import React,{useState} from 'react';
+import { Page } from './Page';
+import { NavBar } from './Components/Nav/Nav';
+import Context from './Components/Context/Context';
 function App() {
+  const [total, setTotal] = useState<number>(0);
   return (
     <>
-      <NavBar/>
-      <Page/>
+    <Context.Provider value={[total, setTotal]}>
+      <NavBar total={total}/>
+      <Page />
+    </Context.Provider>
     </>
   );
 }
 
 export default App;
-
-/* import React from 'react';
-import styled from 'styled-components';
-
-
-const StyledDiv = styled.div`
-  background: red;
-  width: 600px;
-  height: 600px;
-  display: flex;
-`;
-
-function App() {
-  return <StyledDiv>Conteúdo da div</StyledDiv>;
-}
-
-export default App; */
