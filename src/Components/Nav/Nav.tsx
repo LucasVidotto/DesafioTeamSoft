@@ -26,7 +26,6 @@ interface Props{
 export function NavBar({total}:Props){
     
     return(
-        
             <Nav>
                 <Figure >
                         <img src={Logo} alt="Imagem logo"  title='Caixa Correndo'/>

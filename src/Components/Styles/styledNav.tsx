@@ -8,6 +8,12 @@ export const Nav = styled.div`
     height: 80px; 
     margin:0;
     padding: 0%;
+
+    @media (max-width: 768px) {
+        max-width: 100vw;
+        width: 100%;
+        justify-content: center;
+    }
 `
 /* export const Nav = styled.div`
     display:flex;
@@ -41,11 +47,19 @@ img:nth-child(3) {
     width: 12px;
     height: 7.41px;
 }
+    @media (max-width: 768px) {
+        display:none;
+    }
 
 `
 
 export const Figure = styled.figure`
     display:flex;
+
+    @media (max-width: 768px) {
+        width: 160px;
+        height: 50px;
+    }
 
 `
 export const Spans = styled.div`
@@ -84,6 +98,10 @@ export const Search = styled.div`
         border: none;
         outline: none;  
     }
+
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 
 export const Login = styled.div`
@@ -100,6 +118,10 @@ export const Login = styled.div`
         font-size: 16px;
         margin-left: 10.60px;
     }
+
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 export const Cart = styled.div`
     width: 106px;
@@ -107,6 +129,9 @@ export const Cart = styled.div`
     flex: none;
     order: 3;
     flex-grow: 0;
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 
 export const ShopCart = styled.div`
@@ -122,6 +147,9 @@ export const ShopCart = styled.div`
         background: transparent;
         cursor:pointer;
     }
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 export const ValueCart = styled.div`
     position: absolute;
@@ -132,6 +160,9 @@ export const ValueCart = styled.div`
     order: 2;
     z-index: 2;
     color:#FFF;
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 
 export const Elipse = styled.div`
@@ -144,6 +175,9 @@ export const Elipse = styled.div`
     background: #F09035;
     order: 1;
     z-index: 1;
+    @media (max-width: 768px) {
+       display:none;
+    }
 `
 export const SpanCart = styled.span`
     display:flex;
@@ -160,4 +194,7 @@ export const SpanCart = styled.span`
     align-items: center;
     letter-spacing: 0.2px;
     color: #ED3237;
+    @media (max-width: 768px) {
+        display:none;
+    }
 `

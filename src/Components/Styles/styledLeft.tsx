@@ -6,7 +6,10 @@ export const Main = styled.div`
   width:100%;
   justify-content: center;
   align-items: center;
- 
+  @media (max-width: 768px) {
+     display:flex;
+     flex-direction: column;
+  }
 `
 
 export const Container = styled.div`
@@ -15,6 +18,10 @@ export const Container = styled.div`
   max-width: 662px;
   height: 400;
   /* background-color: red; */
+  @media (max-width: 768px) {
+    width: 100%;
+    
+  }
   
 `
 
@@ -55,6 +62,12 @@ export const Section = styled.span`
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  
+  @media (max-width: 768px) {
+    width: 100%;
+        margin-left: 16px;
+  }
 `
 /* export const SectionT = styled.div`
   display: flex;
@@ -79,6 +92,10 @@ export const SectionT = styled.div`
   flex: none;
   order: 2;
   flex-grow: 0;
+  @media (max-width: 768px) {
+    width: 100%;
+        margin-left: 16px;
+  }
 `
 
 export const Span = styled.span`
