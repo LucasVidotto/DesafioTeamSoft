@@ -13,6 +13,9 @@ export function CartAdd(){
     const handlerDecrement = ()=>{
         setCampo( campo - 1);
     }
+    const handlePopoverClose = () => {
+        setType(false);
+      };
     return(
         <>
         <Finish>
@@ -31,7 +34,10 @@ export function CartAdd(){
                 onClick={()=>{setType(!type); setCount(count +1)}}>
                     Adicionar
             </button>
-            {type ? <Popover/> : null}
+            {/* {type 
+                ? 
+                <Popover onClick={() => setType(false)}/> : null} */}{/* remover */}
+                {type && <Popover onClick={handlePopoverClose} type={type} />}
             </Finish>
         </>
     )

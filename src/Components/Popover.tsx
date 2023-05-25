@@ -1,10 +1,18 @@
 import React from 'react';
-import {Popov, Top, Bot, Line, Order,Trian} from './Styles/popover';
-export function Popover(){
+import { AiOutlineClose } from "react-icons/ai";
+import {Popov, Top, Bot, Line, Order,Trian,Closed} from './Styles/styledpop';
+interface Props{
+    onClick : () => void;
+    type: boolean;
+}
+export function Popover({onClick,type}:Props){
     return(
         <Popov>
             <Trian />
             <Top>Adicionado com Sucesso</Top>
+            <Closed onClick={onClick}>
+                <AiOutlineClose />
+            </Closed>
             <Bot>
                 <Line>Oferta Cheddar Bacon</Line>
                 <Order>Ingredientes:

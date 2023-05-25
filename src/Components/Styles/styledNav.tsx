@@ -11,7 +11,7 @@ export const Nav = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100vw;
-        width: 100%;
+        width: 768px;
         justify-content: center;
     }
 `

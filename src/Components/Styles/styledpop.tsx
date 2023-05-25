@@ -35,6 +35,16 @@ export const Top = styled.div`
     align-self: stretch;
     flex-grow: 0;
 `
+
+export const Closed = styled.div`
+   position:absolute;
+   width: 18px;
+   height: 15px;
+   top: 15%;
+   left: 100%;
+   cursor:pointer;
+`
+
  export const Bot = styled.div`
     display: flex;
     flex-direction: column;

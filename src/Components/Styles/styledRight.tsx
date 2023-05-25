@@ -2,16 +2,6 @@ import styled from 'styled-components';
 interface QuantiProps {
     valor: number;
   }
-/* export const Right = styled.div`
-  display:flex;
-  flex-direction: column;
-  margin-top:3rem;
-  margin-left:2rem;
-  width: 60%;
-  height: 80vh;
-  border: solid 2px  #686868;
-  border-radius: 0.75rem;
-` */
 
 export const ContainerRight =  styled.div`
     box-sizing: border-box;
@@ -29,6 +19,14 @@ export const ContainerRight =  styled.div`
     flex: none;
     order: 1;
     flex-grow: 0;
+    @media(max-width:768px){
+        max-width: 100%;
+        width: 100%;
+    }
+    @media(max-width:450px){
+        margin-left: 20px;
+        margin-right: auto;
+    }
 `
 export const ContainerMain = styled.div`
     display: flex;
@@ -211,6 +209,11 @@ export const Finish  = styled.div`
         cursor:pointer;
         &:hover {
             background-color: #f48628;
+        }
+        @media(max-width:410px){
+            max-width: 150px;
+            width: 150px;
+            margin-right: 15%;
         }
     }
     

@@ -6,6 +6,7 @@ import {
     Price 
 } from '../Styles/styledLeft'
 import Image from '../foto.png';
+
 interface Props{
     offer: string,
     description: string,

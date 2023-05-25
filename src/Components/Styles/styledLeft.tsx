@@ -9,6 +9,7 @@ export const Main = styled.div`
   @media (max-width: 768px) {
      display:flex;
      flex-direction: column;
+     width: 100%;
   }
 `
 
@@ -34,6 +35,10 @@ export const Boximage = styled.div`
   /* background-color: blue; */
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 768px){
+    max-width: 100vw;
+  }
 `
 
 /* export const Section = styled.div`
@@ -66,7 +71,7 @@ export const Section = styled.span`
   
   @media (max-width: 768px) {
     width: 100%;
-        margin-left: 16px;
+        /* margin-left: 16px; */
   }
 `
 /* export const SectionT = styled.div`
