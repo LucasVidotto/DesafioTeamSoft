@@ -1,19 +1,22 @@
 import React,{useState} from 'react';
 import { IoIosRemove, IoMdAdd } from 'react-icons/io';
-import { values } from 'sequelize/types/lib/operators';
 import { Items, BoxSpan, Quanti, Line } from '../Styles/styledRight';
 interface Props{
     cheese: string, 
     id: number,
     price: number,
+    ClikedInc: ()=>void;
+    ClikedDec: ()=>void;
+    total:number
 }
-export function Item({id,cheese,price}:Props){
+export function Item({id,cheese,price,ClikedInc,ClikedDec,total}:Props){
     const [quantiti, setQuantiti]= useState([
         {id:0,quantiti:0},
         {id:1,quantiti:0},
         {id:2,quantiti:0},
         {id:3,quantiti:0},
     ]);
+    
     const handleDecrement = (id: number) => {
         setQuantiti((prevIngredients) => {
           const updatedIngredients = prevIngredients.map((ingredient) => {
@@ -43,6 +46,7 @@ export function Item({id,cheese,price}:Props){
   
           return updatedIngredients;
         });
+        
       };
     return(
     <>
@@ -51,14 +55,14 @@ export function Item({id,cheese,price}:Props){
                 <span>{cheese}</span>
                 <span>{price}</span>
             </BoxSpan>
-            <Quanti valor={quantiti[id].quantiti}>
+            <Quanti valor={quantiti[id].quantiti} total={total}>
                 <button
-                    onClick={() => handleDecrement(id)}>
+                    onClick={() => {handleDecrement(id);ClikedDec()}}>
                     <IoIosRemove size="24px"/>
                 </button>
                 <span>{quantiti[id].quantiti}</span>
                 <button
-                    onClick={() =>handleIncrement(id)}>
+                    onClick={() =>{handleIncrement(id); ClikedInc()}}>
                     <IoMdAdd size="24px"/>
                 </button>
             </Quanti>

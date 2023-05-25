@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 interface QuantiProps {
     valor: number;
+    total:number;
   }
 
 export const ContainerRight =  styled.div`
@@ -119,7 +120,6 @@ export const Line = styled.div`
 export const Quanti = styled.div<QuantiProps>`
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
     position: relative;
     width: 89px;
@@ -129,10 +129,7 @@ export const Quanti = styled.div<QuantiProps>`
     border: solid 1px #F09035;
     border-radius:4px;
     & > button{
-        /* width: 14px;
-        height: 18px; */
         color: #D80000;
-
         background: transparent;
         border:none;
         cursor:pointer;
@@ -140,15 +137,12 @@ export const Quanti = styled.div<QuantiProps>`
     }
     button:first-child{
         color: ${(props) => (props.valor <= 0 ? '#AEB6C1' : '#D80000')};
+        pointer-events: ${(props)=> (props.total <= 0 ? 'none': 'all')}
     }
-    /* button:nth-child(2){
-        position: relative;
-        left: -20.83%;
-        right: 20.83%;
-        top: 19.83%;
-        bottom: 45.83%;
-        width: 24px;
-    } */
+    button:last-child{
+        color: ${(props) => (props.total >= 8 ? '#AEB6C1'  : '#D80000')};
+        pointer-events: ${(props)=> (props.total >= 8 ? 'none': 'all')}
+    }
 `
 export const ContainerTalher = styled.div`
     display:flex;
@@ -233,8 +227,6 @@ export const MoreLess = styled.div<QuantiProps>`
     border: 1px solid #F09035;
     border-radius: 4px;
     & > button{
-        /* width: 14px;
-        height: 18px; */
         color: #D80000;
         background: transparent;
         border:none;

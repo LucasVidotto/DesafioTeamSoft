@@ -10,7 +10,6 @@ import {
     RSpanTwo,
     ContainerTalher,
 }  from './Components/Styles/styledRight';
-
 import { Left } from './Components/Left/Left';
 import { Item } from './Components/Item/Item';
 import { CartAdd } from './Components/Button/cartAdd';
@@ -32,6 +31,7 @@ export function Page(){
         price: 0,
         discount: 0,
     });
+    const [total,setTotal] = useState(0);
     useEffect(() => {
         axios.get(baseURL).then((response) => {
             setNewImgredients((prevState) => {
@@ -70,7 +70,6 @@ export function Page(){
 
         });
       }, []);
-    const [type,setType] = useState(false);
     return(
         <Main>
             <Left 
@@ -91,6 +90,9 @@ export function Page(){
                             id={item.id}
                             cheese={item.description}
                             price={item.price}
+                            ClikedInc={() => setTotal(total + 1)}
+                            ClikedDec={() => setTotal(total - 1)}
+                            total = {total}
                             />
                         ))}
                     <ContainerTalher>
