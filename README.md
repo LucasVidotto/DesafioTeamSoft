@@ -11,3 +11,6 @@
 
 <li> Botões + ou -, com funcionalide para somar e subtrair, e quando chega em 0 desativa o botão -, de forma individual, cada um que tiver 0 será desativado
 , ja no botão +, chgando a 8 no total, todos são desativados</li>
+<li> Precisa de talhar, como um botão radio, só pode ser escolhido um apenas </li>
+<li> Botão de adicionar, colocando sempre +1 ao carrinho, e abrindo o popover do pedido</li>
+<li> Botão X pop over, fecha o popover </li>
