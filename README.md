@@ -2,6 +2,10 @@
 
 # Alguma das Funcionalidades
 
+## Responsivel:
+
+<li>Design responsivel para telas abaixo de 768px</li>
+
 ## API
 <li> Consumo de API para as partes Right e Left, tanto para os ingredientes, como descrição abaixo das imagens </li>
 
