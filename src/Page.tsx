@@ -9,10 +9,11 @@ import {
     RSpanOne,
     RSpanTwo,
     ContainerTalher,
+    YesNo,
 }  from './Components/Styles/styledRight';
 import { Left } from './Components/Left/Left';
 import { Item } from './Components/Item/Item';
-import { CartAdd } from './Components/Button/cartAdd';
+import { CartAdd } from './Components/CartAdd/cartAdd';
 interface Ingredient {
     id: number;
     description: string;
@@ -79,7 +80,7 @@ export function Page(){
             discount={products.discount}
             />
             <ContainerRight>
-                <ContainerMain>
+                <ContainerMain id="elemento">
                     <AddItems>
                         <RSpanOne>Adicionar Ingredientes</RSpanOne>
                         <RSpanTwo>Até 8 ingredientes.</RSpanTwo>
@@ -97,6 +98,15 @@ export function Page(){
                         ))}
                     <ContainerTalher>
                         <span>Precisa de Talher?</span>
+                        <YesNo>
+                            <label id="Sim">
+                                 <input type="radio" name="escolha" value="sim"/> Sim
+                            </label>
+
+                            <label>
+                                <input type="radio" name="escolha" value="nao"/> Não
+                            </label>
+                        </YesNo>
                     </ContainerTalher>
                 </ContainerMain>
                 <CartAdd />     

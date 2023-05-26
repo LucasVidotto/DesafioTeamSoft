@@ -30,14 +30,26 @@ export const Boximage = styled.div`
   display:flex;
   width: 100%;
   height: 100%;
-  margin-top: 2rem;
+  max-width: 100%;
+  max-height: 100%;
+/*   overflow: hidden; */
   margin-left: 3.5rem;
   /* background-color: blue; */
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-
+  img:first-child{
+    width: auto;
+    max-width: 700px;
+    height: 100%;
+  }
   @media(max-width: 768px){
     max-width: 100vw;
+    margin-left: 1rem;
+    img:first-child{
+      width: 80%;
+      height: auto;
+      
+    }
   }
 `
 
@@ -99,7 +111,7 @@ export const SectionT = styled.div`
   flex-grow: 0;
   @media (max-width: 768px) {
     width: 100%;
-        margin-left: 16px;
+    margin-left: 16px;
   }
 `
 

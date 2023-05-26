@@ -23,6 +23,7 @@ export const ContainerRight =  styled.div`
     @media(max-width:768px){
         max-width: 100%;
         width: 100%;
+        border:none;
     }
     @media(max-width:450px){
         margin-left: 20px;
@@ -74,7 +75,7 @@ export const RSpanTwo = styled.span`
     width: 343px;
     height: 16px;
     left: 16px;
-    top: 31px;
+    top: 28px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -137,15 +138,19 @@ export const Quanti = styled.div<QuantiProps>`
     }
     button:first-child{
         color: ${(props) => (props.valor <= 0 ? '#AEB6C1' : '#D80000')};
-        pointer-events: ${(props)=> (props.total <= 0 ? 'none': 'all')}
+        pointer-events: ${(props)=> (props.valor <= 0 ? 'none': 'all')}
     }
     button:last-child{
         color: ${(props) => (props.total >= 8 ? '#AEB6C1'  : '#D80000')};
         pointer-events: ${(props)=> (props.total >= 8 ? 'none': 'all')}
     }
+    @media (max-width:768px) {
+        margin: 0;
+    }
 `
 export const ContainerTalher = styled.div`
     display:flex;
+    flex-direction: row;
     align-items: center;
     position: relative;
     width: 375px;
@@ -159,6 +164,15 @@ export const ContainerTalher = styled.div`
         margin-left: 1rem;
     }
 `
+export const YesNo = styled.div`
+    display:flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: end;
+`
+
+
 export const SideT = styled.div`
     position: absolute;
     width: 343px;

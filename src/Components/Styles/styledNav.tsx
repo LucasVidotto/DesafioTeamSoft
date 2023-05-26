@@ -52,6 +52,24 @@ img:nth-child(3) {
     }
 
 `
+export const BoxSec = styled.div`
+position: absolute;
+top:10%;
+left:23.8%;
+flex-direction:row;
+align-items: center;
+margin-left: 114px;
+margin-right: 24px;
+width: 230px;
+height: 48px;
+background-color: #f0f0f0;
+border: 1px solid #ED3237;
+border-radius: 4px;
+@media (max-width: 768px) {
+    display:none;
+}
+
+`
 
 export const Figure = styled.figure`
     display:flex;
@@ -81,10 +99,17 @@ export const Spans = styled.div`
     }
 
 `
+export const Street = styled.button`
+    display:flex;
+    width: 20%;
+    margin-right:4%;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+`
 export const Search = styled.div`
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     width: 354px;
     height: 48px;
@@ -98,6 +123,9 @@ export const Search = styled.div`
         border: none;
         outline: none;  
     }
+    & > :nth-child(2) {
+        margin-right: 0.5rem;
+    } 
 
     @media (max-width: 768px) {
         display:none;

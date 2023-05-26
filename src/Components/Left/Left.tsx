@@ -18,7 +18,7 @@ export function Left({offer,description,discount,price}:Props){
         <>
         <Container >
                 <Boximage>
-                    <img src={Image} alt="Hamburguer" style={{width:'560px',height:'340px' }}/>
+                    <img src={Image} alt="Hamburguer" />
                 </Boximage>
                 <Section>
                     {offer}

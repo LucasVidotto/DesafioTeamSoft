@@ -52,7 +52,7 @@ export const Closed = styled.div`
     padding: 20px 11px;
     gap: 8px;
     width: 208px;
-    height: 114px;
+    min-height: 114px;
     background: #F8F8F8;
     border-radius: 0px 0px 4px 4px;
     flex: none;
@@ -82,7 +82,7 @@ export const Closed = styled.div`
     padding: 0px;
     gap: 4px;
     width: 181px;
-    height: 76px;
+    min-height: 76px;
     flex: none;
     order: 1;
     flex-grow: 0;

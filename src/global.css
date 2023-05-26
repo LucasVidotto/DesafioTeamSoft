@@ -2,3 +2,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@midia (max-width:768px) {
+  body {
+    width: 100vw;
+    height: 100%;
+  }
+}

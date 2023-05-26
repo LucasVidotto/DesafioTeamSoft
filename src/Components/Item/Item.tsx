@@ -53,7 +53,7 @@ export function Item({id,cheese,price,ClikedInc,ClikedDec,total}:Props){
         <Items style={{marginTop:'1rem'}}>
             <BoxSpan>
                 <span>{cheese}</span>
-                <span>{price}</span>
+                <span>R$ {price}</span>
             </BoxSpan>
             <Quanti valor={quantiti[id].quantiti} total={total}>
                 <button
