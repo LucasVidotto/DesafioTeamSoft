@@ -2,6 +2,9 @@
 
 # Alguma das Funcionalidades
 
+## API
+<li> Consumo de API para as partes Right e Left, tanto para os ingredientes, como descrição abaixo das imagens </li>
+
 ## NavBar:
 <li> Botão de busca, buscando por elementos ids </li>
 <li> Campo de endereço, coloquei um botão para mostrar outro endereço, como uma ferramenta para endereços salvos </li>
