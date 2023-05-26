@@ -21,3 +21,8 @@
 <li> Precisa de talhar, como um botão radio, só pode ser escolhido um apenas </li>
 <li> Botão de adicionar, colocando sempre +1 ao carrinho, e abrindo o popover do pedido</li>
 <li> Botão X popover, fecha o popover </li>
+
+## Mecanicas podendo ser adicionadas:
+
+<li> Não foi mexido no botão de Login(entrar) e carrinho, pois não sabia se podia criar outro tipo de estrutura não mencionada, como novas funcionalidades fora desse padrão e/ou
+  telas novas como de login e cart </li>
