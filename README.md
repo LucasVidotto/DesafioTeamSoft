@@ -8,3 +8,6 @@
 <li> Botão de busca, buscando por elementos ids </li>
 
 ## Right(Ingredientes):
+
+<li> Botões + ou -, com funcionalide para somar e subtrair, e quando chega em 0 desativa o botão -, de forma individual, cada um que tiver 0 será desativado
+, ja no botão +, chgando a 8 no total, todos são desativados</li>
