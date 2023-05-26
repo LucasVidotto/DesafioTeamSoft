@@ -58,7 +58,6 @@ export function Page(){
                     description: response.data[0].ingredients[0].itens[3].nm_item,
                     price: response.data[0].ingredients[0].itens[3].vl_item,
                 };
-                
                 return updatedIngredients;
             })
             setProducts({

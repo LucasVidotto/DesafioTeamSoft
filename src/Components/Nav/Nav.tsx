@@ -1,4 +1,5 @@
 import React, { useState,useRef } from 'react';
+import { LoginPop } from './Popover/LoginPop';
 import
 {
 Nav,
@@ -27,17 +28,20 @@ interface Props{
 total:number
 }
 export function NavBar({total}:Props){
-const [type,setType] = useState(false);
-const searchInputRef = useRef<HTMLInputElement>(null);
-
+    const [type,setType] = useState(false);
+    const [log,setLog] = useState(false);
+    const searchInputRef = useRef<HTMLInputElement>(null);
     const handleSearch = () => {
-      const idToSearch = 'elemento-id'; // ID do elemento que você deseja buscar
+      const idToSearch = 'elemento-id';
 
       const elementToSearch = document.getElementById(idToSearch);
       if (elementToSearch) {
         elementToSearch.scrollIntoView({ behavior: 'smooth' });
       }
     };
+    const handlePopoverClose = () => {
+        setLog(false);
+      };
     return(
             <Nav>
                 <Figure >
@@ -76,7 +80,10 @@ const searchInputRef = useRef<HTMLInputElement>(null);
                     <AiOutlineSearch size="24px" color="#ED3237" style={{marginTop:'auto', marginBottom:'auto'}}/>
                 </Search>
                 <Login>
-                        <BiUserCircle size="26.67px" color="#ED3237" />
+                       <button
+                        onClick={()=>setLog(!log)}>
+                            <BiUserCircle size="26.67px" color="#ED3237" />
+                       </button>
                         <span>Entrar</span>
                 </Login>
                 <Cart>
@@ -89,6 +96,7 @@ const searchInputRef = useRef<HTMLInputElement>(null);
                             <SpanCart >Carrinho</SpanCart>
                         </ShopCart>
                 </Cart>
+                {log && <LoginPop onClick={handlePopoverClose} log={log} />}
             </Nav>
     )
 

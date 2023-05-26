@@ -7,7 +7,6 @@ export function CartAdd(){
     const [count, setCount] = useContext<number>(Context);
     const [campo, setCampo] =useState(0);
     const [type, setType] = useState(false);
-    /* const [items, setItems] = useState([]); */
     const handlerIncrement = ()=>{
         setCampo( campo +1);
     }
@@ -17,14 +16,6 @@ export function CartAdd(){
     const handlePopoverClose = () => {
         setType(false);
       };
-      /* const handlerItem = (description: string, quanti: number) => {
-        const newItem = {
-          description: description,
-          quanti: quanti,
-        };
-      
-        setItems([...items, newItem]);
-      }; */
     return(
         <>
         <Finish>

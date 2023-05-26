@@ -15,21 +15,6 @@ export const Nav = styled.div`
         justify-content: center;
     }
 `
-/* export const Nav = styled.div`
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #F4F4F4;
-    width: 1280px;
-    height: 80px;
-    padding: 16px 40px;
-    gap: 24px;
-    margin:0;
-    padding: 0%;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-` */
-
 export const Box = styled.div`
 display:flex;
 flex-direction:row;
@@ -40,8 +25,6 @@ width: 230px;
 height: 48px;
 background-color: #FFFFFF;
 border-radius: 4px;
-
-
 img:nth-child(3) {
     color:#D80000;
     width: 12px;
@@ -144,9 +127,17 @@ export const Login = styled.div`
     span:nth-child(2){
         color: #ED3237;
         font-size: 16px;
-        margin-left: 10.60px;
-    }
+        margin-left: 10px;
 
+    }
+    button:nth-child(1){
+        width: 26px;
+        background: transparent;
+        border:none;
+    }
+    &> :nth-child(1){
+        cursor:pointer;
+    }
     @media (max-width: 768px) {
         display:none;
     }

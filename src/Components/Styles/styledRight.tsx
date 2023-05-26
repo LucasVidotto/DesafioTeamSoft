@@ -38,7 +38,6 @@ export const ContainerMain = styled.div`
     gap: 16px;
     width: 375px;
     height: 537px;
-    /* overflow-y: scroll; */
     flex: none;
     order: 0;
     flex-grow: 1;

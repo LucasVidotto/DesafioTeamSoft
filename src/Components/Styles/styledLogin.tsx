@@ -3,14 +3,15 @@ import styled from 'styled-components';
 export const Popov = styled.div`
     display: flex;
     position: absolute;
-    top:48%;
-    left: 65%;
+    top:10%;
+    left: 75%;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     width: 208px;
     height: 154px;
     filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
+    z-index:1;
 `
 export const Trian = styled.div`
      width: 0;
@@ -57,32 +58,5 @@ export const Closed = styled.div`
     flex: none;
     order: 2;
     align-self: stretch;
-    flex-grow: 0;
- `
-
- export const Line = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 186px;
-    height: 14px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
- `
-
- export const Order = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 4px;
-    width: 181px;
-    min-height: 76px;
-    flex: none;
-    order: 1;
     flex-grow: 0;
  `

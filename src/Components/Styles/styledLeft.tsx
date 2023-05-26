@@ -12,7 +12,6 @@ export const Main = styled.div`
      width: 100%;
   }
 `
-
 export const Container = styled.div`
   display:flex;
   flex-direction: column;
@@ -25,17 +24,13 @@ export const Container = styled.div`
   }
   
 `
-
 export const Boximage = styled.div`
   display:flex;
   width: 100%;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-/*   overflow: hidden; */
   margin-left: 3.5rem;
-  /* background-color: blue; */
-  /* justify-content: center; */
   align-items: center;
   img:first-child{
     width: auto;
@@ -52,17 +47,6 @@ export const Boximage = styled.div`
     }
   }
 `
-
-/* export const Section = styled.div`
-  display: flex;
-  width: auto;
-  height: auto;
-  margin: 0;
-  span:first-child{
-    color:#4E4E4E;
-    font-size:28px;
-  }
-` */
 export const Section = styled.span`
   width: 528.56px;
   height: 91.59px;
@@ -83,19 +67,8 @@ export const Section = styled.span`
   
   @media (max-width: 768px) {
     width: 100%;
-        /* margin-left: 16px; */
   }
 `
-/* export const SectionT = styled.div`
-  display: flex;
-  width: auto;
-  height: auto;
-  margin-top: 72px;
-  span:first-child{
-    color:#4E4E4E;
-    font-size:20px;
-  }
-` */
 export const SectionT = styled.div`
   width: 597px;
   height: 65.17px;
@@ -136,8 +109,6 @@ export const Price = styled.div`
   order: 3;
   flex-grow: 0;
   & > span {
-/*     width: 116px;
-    height: 38px; */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
