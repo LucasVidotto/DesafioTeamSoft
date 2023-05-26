@@ -26,3 +26,13 @@
 
 <li> Ao clicar Login(entrar) feito um popover de manutenção, pois não sabia se podia criar outro tipo de estrutura não mencionada, como novas funcionalidades fora 
   desse padrão e/ou telas novas como de login e cart </li>
+
+## tecnologias 
+
+Reactjs 
+Typescript 
+React-context
+styled-components
+css
+Htm
+axios
