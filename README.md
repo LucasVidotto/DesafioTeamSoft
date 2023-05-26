@@ -24,5 +24,5 @@
 
 ## Mecanicas podendo ser adicionadas:
 
-<li> Não foi mexido no botão de Login(entrar) e carrinho, pois não sabia se podia criar outro tipo de estrutura não mencionada, como novas funcionalidades fora desse padrão e/ou
-  telas novas como de login e cart </li>
+<li> Ao clicar Login(entrar) feito um popover de manutenção, pois não sabia se podia criar outro tipo de estrutura não mencionada, como novas funcionalidades fora 
+  desse padrão e/ou telas novas como de login e cart </li>
